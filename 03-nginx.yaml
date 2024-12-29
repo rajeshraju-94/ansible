@@ -1,6 +1,7 @@
 # this playbook is to install and run nginx
 - name: install and run nginx
   hosts: web
+  become: yes
   tasks:
     - name: install nginx
       ansible.builtin.package:
