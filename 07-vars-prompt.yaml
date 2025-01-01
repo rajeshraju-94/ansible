@@ -7,7 +7,7 @@
       prompt:
     - name: "Father_Name"
       prompt:
-    private: false
+    private: false # the values user entering can see
   tasks:
     - name: read values from the user input
       ansible.builtin.debug:
