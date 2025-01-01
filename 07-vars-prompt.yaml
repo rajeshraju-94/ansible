@@ -7,3 +7,7 @@
       prompt:
     - name: "Father_Name"
       prompt:
+  tasks:
+    - name: read values from the user input
+      ansible.builtin.debug:
+        msg: "my child name is {{CHILD}} and his age is {{AGE}} and his father name is {{Father_Name}}"
