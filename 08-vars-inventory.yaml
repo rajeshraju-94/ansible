@@ -1,6 +1,6 @@
 - name: variables from the inventory file
   hosts: web
   tasks:
-  - name: values assigned from the inventory.ini file
+  - name: values assigned from the inventory file
     ansible.builtin.debug:
       msg: "my name is {{Name}} and age is {{Age}}, my skill {{Skill}} {{Job}}"
