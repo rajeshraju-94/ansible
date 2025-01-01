@@ -1,0 +1,11 @@
+- name: Play level and task level variables
+  hosts: web
+  vars:
+    NAME: "Rajesh RAJU"
+    WIFE: "Meena"
+  tasks:
+    - name: verifying play and task level variable
+      vars:
+        WIFE: "Amudala Meena"
+      ansible.builtin.debug:
+        msg: "I am {{NAME}} and my wife name is {{WIFE}}"
