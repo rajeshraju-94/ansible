@@ -1,6 +1,6 @@
 - name: variables from the user input
   hosts: web
-    private: false # the values user entering can see
+  private: false # the values user entering can see
   vars_prompt: # by default ansible user input values are confidential
     - name: "CHILD"
       prompt:
