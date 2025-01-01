@@ -1,5 +1,6 @@
 - name: Devops course information
-  hosts: local
+  hosts: local # running ansible playbook on ansible-server itself
+  connection: local
   tasks:
     - name: data types in ansible
       vars:
