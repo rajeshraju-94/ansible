@@ -2,15 +2,15 @@
   hosts: local
   connection: local
   vars_prompt:
-    name: number
+  - name: number
     prompt: enter a number
     private: false
   tasks:
-    - name: verify number is less than 10 or not
+  - name: verify number is less than 10 or not
       ansible.builtin.debug:
         msg: "entered {{number}} is less than 10"
     when: number > 10
-    - name: verify number is greater than equal 10
+  - name: verify number is greater than equal 10
       ansible.builtin.debug:
         msg: "entered {{number}} is greate than 10"
     when: number >= 10
