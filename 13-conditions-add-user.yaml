@@ -6,7 +6,6 @@
     ansible.builtin.command: id expense
     register: USER # USER is a variable that gets input from above command
     ignore_errors: True
-
   - name: copy user information
     ansible.buildin.debug:
       msg: "user info {{ USER }}"
