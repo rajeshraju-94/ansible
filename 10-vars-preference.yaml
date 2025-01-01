@@ -14,7 +14,7 @@
   - name: print the information
     vars:
       #COURSE: "DevOps with AWS from TASK level"
-      COURSE: "120HRS"
+      COURSE: "DevOps with AWS"
       TRAINER: "Sivakumar Reddy M"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}"
