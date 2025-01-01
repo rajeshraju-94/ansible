@@ -1,0 +1,8 @@
+- name: verify and create user if not already exists
+  hosts: web
+  become: yes
+  tasks:
+  - name: expense user exist or not
+    ansible.builtin.command: id expense
+    register: USER
+    

@@ -8,7 +8,7 @@
   tasks:
   - name: verify number is less than 10 or not
     ansible.builtin.debug:
-      msg: "entered {{number}} is less than 10"
+      msg: "entered number {{number}} is less than 10"
     when: number | int < 10 # converting string to integer
   - name: verify number is greater than equal 10
     ansible.builtin.debug:
