@@ -16,4 +16,6 @@ ansible -i inventory.ini ungrouped --list-hosts
 
 ansible -i inventory.ini web --list-hosts
 
+ansible -i inventory.ini all --list-hosts ==> to see all servers from inventory file
+
 
