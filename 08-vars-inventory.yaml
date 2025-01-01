@@ -4,3 +4,9 @@
   - name: values assigned from the inventory file
     ansible.builtin.debug:
       msg: "my name is {{Name}} and age is {{Age}}, my skill {{Skill}} and job is: {{Job}}"
+- name: variables to print
+  hosts: web
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{Name}}, and age is {{Age}}, my skill {{Skill}} and job is: {{Job}}"
