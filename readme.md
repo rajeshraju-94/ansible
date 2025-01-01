@@ -11,4 +11,9 @@ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password="
 
 ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password="DevOps321" -e "Name=Rajesh Greeting=Evening" 09-vars-from-args.yaml
 
+# below command is to list "ungrouped" / "grouped" servers from inventory file
+ansible -i inventory.ini ungrouped --list-hosts
+
+ansible -i inventory.ini web --list-hosts
+
 
