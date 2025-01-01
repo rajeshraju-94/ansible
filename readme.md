@@ -3,3 +3,7 @@ ansible -i 172.31.95.87, all -e ansible_user=ec2-user -e ansible_password="DevOp
 
 172.31.95.87 = this is ansible node server private IP address
 -m is the module name
+
+# below command is to run any ansible play book from server to the node
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password="DevOps321" 01-ping-pong.yaml
+
