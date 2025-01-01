@@ -1,0 +1,8 @@
+- name: variables from the another vars file
+  hosts: web
+  vars_files:
+    - vars.yaml
+  tasks:
+    - name: variables will be assigned from a another file
+      ansible.builtin.debug:
+        msg: "My name is {{Father_Name}} and my son name is {{Name}} his age is {{age}}"
