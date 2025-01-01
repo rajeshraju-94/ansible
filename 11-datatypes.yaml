@@ -15,8 +15,12 @@
         - Git
         live: true # boolean
         tools: # map / dictionary
-          ci: jenkins
+          ci: jenkins # string
           cm: ansible and terraform
           cloud: AWS
+          AWS: # list
+          - IAM
+          - VPC
+          - Load Balancer
       ansible.builtin.debug:
         msg: "Hi, I am learning {{Course}}, Duration is {{Duration}} and {{topics}}, live: {{live}} tools are {{tools}}"
