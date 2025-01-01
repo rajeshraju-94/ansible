@@ -4,5 +4,7 @@
   tasks:
   - name: expense user exist or not
     ansible.builtin.command: id expense
-    register: USER
-    
+    register: USER # USER is a variable that gets input from above command
+  - name: copy user information
+    ansible.buildin.debug:
+      msg: "user info {{USER}}"
