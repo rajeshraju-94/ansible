@@ -1,0 +1,9 @@
+- name: variables from the user input
+  hosts: web
+  vars:
+    Name: "Hethansh"
+      prompt:
+    age: "2.5 years"
+      prompt:
+    Father_Name: "Rajesh"
+      prompt:
