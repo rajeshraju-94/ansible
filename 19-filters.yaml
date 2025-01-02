@@ -51,5 +51,6 @@
     - name: validate correct IP or not
       vars:
         myip: 192.168.1.1
+        myip1: 288.3.666.3
       ansible.builtin.debug:
-        msg: "corret IP: {{ myip | ansible.utils.ipv4 }} and wrong ip: {{ 288.3.666.3 | ansible.utils.ipv4 }}"
+        msg: "corret IP: {{ myip | ansible.utils.ipv4 }} and wrong ip: {{ myip1 | ansible.utils.ipv4 }}"
