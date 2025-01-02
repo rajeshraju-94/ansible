@@ -1,6 +1,7 @@
 - name: loos for installing apps
   hosts: local
   connection: local
+  become: yes
   tasks:
     - name: install if not and do not install if already exists
       ansible.builtin.package:
