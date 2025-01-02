@@ -10,8 +10,9 @@
     - backend
     - mysql
   tasks:
-    - name: creat instances
+    - name: create instances
       amazon.aws.ec2_instance:
+        name: "{{ item }}"
         vpc_subnet_id: "{{ vpc_subnet_id }}"
         instance_type: "t3.micro"
         security_group: "{{ sg_id }}"
