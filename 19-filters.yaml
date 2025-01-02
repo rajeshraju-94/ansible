@@ -38,4 +38,13 @@
           wife: "Meena"
       ansible.builtin.debug:
         msg: "{{ family | dict2items }}"
+
+    - name: convert list to map
+      vars:
+        family:
+        - { "key": "name","value": "Rajesh" }
+        - { "key": "age","value": 30 }
+        - { "key": "wife","value": "Meena" }
+      ansible.builtin.debug:
+        msg: "{{ family | items2dict }}"
     
