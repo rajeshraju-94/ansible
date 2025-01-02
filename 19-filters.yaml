@@ -54,4 +54,5 @@
         myip1: 288.3.666.3
       ansible.builtin.debug:
         msg: "corret IP: {{ myip | ansible.utils.ipv4 }}"
+      ansible.builtin.debug:
         msg: "wrong ip: {{ myip1 | ansible.utils.ipv4 }}"
