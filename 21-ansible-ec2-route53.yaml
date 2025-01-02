@@ -9,6 +9,7 @@
     - frontend
     - backend
     - mysql
+    my_zone: "daws-krajesh.online"
   tasks:
     - name: create instances
       amazon.aws.ec2_instance:
@@ -18,8 +19,20 @@
         security_group: "{{ sg_id }}"
         image_id: "{{ image_ami_id }}"
       loop: "{{ instances }}"
-      register: instances
+      register: ec2-instances
     
     - name: print instances info
       ansible.builtin.debug:
-        msg: "{{ instances }}"
+        msg: "{{ ec2-instances }}"
+    
+    - name: create Route 53 records
+      amazon.aws.route53:
+        state: present
+        zone: "{{ my_zone }}"
+        record: "{{ item.item }}.{{ my_zone }}"
+        type: A
+        ttl: 1
+        value: {{ item.instances[0].private_ip_address }}
+        wait: True
+        overwrite: True
+      loop: {{ ec2_instances.results }}
