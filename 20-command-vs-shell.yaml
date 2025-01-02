@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   tasks:
-  # - name: ansible command
-  #   ansible.builtin.command: ls -ltr > /tmp/output.txt
-  #     ignore_errors: True
-    - name: ansible shell
-      ansible.builtin.shell: ls -lter > /tmp/output.txt
+  - name: ansible command
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
+      ignore_errors: True
+  - name: ansible shell
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
   
