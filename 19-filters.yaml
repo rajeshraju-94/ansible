@@ -36,6 +36,6 @@
           name: "Rajesh"
           age: 30
           wife: "Meena"
-      ansible.buitlin.debug:
+      ansible.builtin.debug:
         msg: "{{ family | dict2items }}"
     
