@@ -2,7 +2,7 @@ plugin: amazon.aws.aws_ec2 ## ansible dynamic inventory to fetch IP addresses
 regions:
 - ap-south-1
 filters:
-  tag:Name: ansible
+  tag:Name: demo
   instance-state-name : running
 hostnames:
   - public-ip-address
