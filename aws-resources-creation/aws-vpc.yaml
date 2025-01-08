@@ -1,0 +1,13 @@
+- name: VPC in AWS
+  hosts: local
+  connection: local
+  tasks:
+    - name: create VPC in ap-south-1 regoin
+      amazon.aws.ec2_vpc_net:
+        name: Module_dev2
+        cidr_block: 10.10.0.0/16
+        region: ap-south-1
+      tags:
+        module: ec2_vpc_net
+        this: works
+      tenancy: dedicated

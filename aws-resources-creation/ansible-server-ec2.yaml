@@ -1,0 +1,11 @@
+plugin: amazon.aws.aws_ec2 ## ansible dynamic inventory to fetch IP addresses
+regions:
+- ap-south-1
+filters:
+  tag:Name: ansible
+  instance-state-name : running
+hostnames:
+  - public-ip-address
+compose:
+  # This sets the `ansible_host` variable to connect with the private IP address without changing the hostname.
+  ansible_host: public_ip_address
